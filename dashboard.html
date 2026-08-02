@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Attendance</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div><p class="eyebrow">B.Sc. Chemistry · 5th Semester</p><h1>Attendance Dashboard</h1></div>
+  <div class="top-actions"><div id="today" class="date-pill"></div><button id="logoutBtn" class="ghost">Logout</button></div>
+</header>
+<main class="container">
+  <section class="welcome-row">
+    <div><p class="muted">Student</p><h2 id="studentRoll">—</h2></div>
+    <div class="legend"><span><i class="dot present"></i>Present</span><span><i class="dot absent"></i>Absent</span><span><i class="dot pending"></i>Not marked</span></div>
+  </section>
+
+  <section>
+    <h3>Overall attendance</h3>
+    <div id="overallCards" class="stats-grid"></div>
+  </section>
+
+  <section class="panel">
+    <div class="section-head">
+      <div><p class="eyebrow dark">Monthly record</p><h3 id="monthTitle">—</h3></div>
+      <div class="month-nav"><button id="prevMonth" class="ghost">← Previous</button><button id="thisMonth" class="ghost">Current</button><button id="nextMonth" class="ghost">Next →</button></div>
+    </div>
+    <div id="monthCards" class="stats-grid compact"></div>
+  </section>
+
+  <section class="panel">
+    <div class="section-head"><div><p class="eyebrow dark">Subject breakdown</p><h3>Selected month</h3></div></div>
+    <div id="subjectSummary" class="subject-summary"></div>
+  </section>
+
+  <section class="panel">
+    <div class="section-head">
+      <div><p class="eyebrow dark">Daily attendance</p><h3>Click a scheduled class to mark it</h3></div>
+      <span id="saveState" class="save-state">Synced</span>
+    </div>
+    <div class="table-wrap"><table id="attendanceTable">
+      <thead><tr><th>Date</th><th>Day</th><th>Physical Chemistry II</th><th>Organic Chemistry</th><th>Inorganic Chemistry II</th><th>Minor V</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </section>
+</main>
+<div id="toast" class="toast"></div>
+<script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

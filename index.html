@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>B.Sc. Chemistry 5th Sem Attendance</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="brand-panel">
+      <div>
+        <p class="eyebrow">Department of Chemistry</p>
+        <h1>B.Sc. Chemistry<br>5th Semester</h1>
+        <p class="muted-light">Attendance Portal · July–December 2026</p>
+      </div>
+      <div class="subject-chips">
+        <span>Physical Chemistry II</span><span>Organic Chemistry</span>
+        <span>Inorganic Chemistry II</span><span>Minor V</span>
+      </div>
+    </section>
+    <section class="login-card">
+      <p class="eyebrow dark">Welcome back</p>
+      <h2>Sign in</h2>
+      <p class="muted">Students use their roll number and password. Admin uses the admin username and password.</p>
+      <form id="loginForm">
+        <label>Roll number / Admin username
+          <input id="loginId" autocomplete="username" placeholder="242031001" required />
+        </label>
+        <label>Password
+          <input id="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
+        </label>
+        <button class="primary" type="submit">Sign in</button>
+        <p id="loginError" class="error"></p>
+      </form>
+      <p class="tiny">Semester attendance begins 20 July 2026.</p>
+    </section>
+  </main>
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
